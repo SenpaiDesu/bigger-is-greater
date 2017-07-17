@@ -1,6 +1,6 @@
 const biggerIsGreater = (w) => {
     if (typeof w !== 'string' || !w.match(/[a-zA-Z]/g)) return null;
-    var input = w.split("");
+    var input = w.toLowerCase().split("");
     for (var i = input.length - 1; i > 0; i--){
         if (input[i] > input[i - 1]){
             var minDiff = input[i].charCodeAt(0) - input[i - 1].charCodeAt(0);
